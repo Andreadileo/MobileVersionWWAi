@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Wave Wise",
+    "slug": "wavewise",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F1216"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.wavewise.app",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Wave Wise ha bisogno di accedere alla libreria per selezionare i tuoi video di surf.",
+        "NSCameraUsageDescription": "Wave Wise usa la fotocamera per registrare le tue sessioni di surf."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F1216"
+      },
+      "permissions": [
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.READ_EXTERNAL_STORAGE"
+      ],
+      "package": "com.wavewise.app"
+    },
+    "scheme": "wavewise",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Wave Wise ha bisogno di accedere alla tua libreria per i video di surf."
+        }
+      ],
+      "expo-asset",
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "YOUR_EAS_PROJECT_ID"
+      }
+    }
+  }
+}
